@@ -1,0 +1,36 @@
+{
+    "name": "vcian/laravel-utils",
+    "description": "Laravel utils provide frequently used helper functions at a single place.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php" : "^8.0",
+        "league/flysystem-aws-s3-v3": "3.0.0",
+        "intervention/image": "^2.7"
+    },  
+    "scripts": {
+        "post-package-install": [
+            "php install.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vcian\\LaravelUtils\\Providers\\LaravelUtilServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Vcian\\LaravelUtils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vcian - ViitorCloud",
+            "homepage": "https://github.com/vcian"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
